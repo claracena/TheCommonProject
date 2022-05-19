@@ -10,6 +10,18 @@
 # Imports
 
 
+# This function defines the basic information about this module.
+def head():
+    # Write the group this module belongs to
+    # If it doesn't belong in any group, write 'root'
+    group = 'Games'
+    # Put the name for the option to appear in the main menu
+    name = 'Testing'
+    # Write a quick description of this module
+    description = 'This is a test feature/module'
+
+    return {'group': group, 'name': name, 'description': description}
+
 # Put your work under this line and call it from inside main():
 
 
