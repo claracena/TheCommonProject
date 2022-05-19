@@ -29,7 +29,12 @@ def index():
 
     for module, mod_name in modules.items():
         modx = globals()[mod_name].head()
-        groups.append({'cat': modx['group'], 'name': modx['name'], 'desc': modx['description'], 'file': module})
+        groups.append(
+            {'cat': modx['group'],
+            'name': modx['name'],
+            'desc': modx['description'],
+            'file': module}
+            )
         # menu.append(modx['group']) if modx['group'] not in groups else
         if modx['group'] not in menu:
             menu.append(modx['group'])
