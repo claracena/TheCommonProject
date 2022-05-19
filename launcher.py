@@ -17,19 +17,18 @@ def index():
     welcome_msg += '#################################\n'
     main_question = 'Please select an option from the list:\n'
     options = ['First option',
-                'Second option',
-                'Tercer option'
-                ]
+               'Second option',
+               'Third option'
+              ]
     selection = None
 
     print(welcome_msg)
     print(main_question)
 
-    while selection == None:
-        for i, option in enumerate(options):
-            print(f'{i} - {option}')
-        print()
-        print(int(input('Option: ')))
+    for i, option in enumerate(options):
+        print(f'{i} - {option}')
+
+    print(input('\nOption (any other option to exit): '))
 
 # Main function to call all other methods
 def main():
