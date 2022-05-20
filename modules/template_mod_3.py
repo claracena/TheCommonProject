@@ -14,11 +14,13 @@
 def head():
     # Write the group this module belongs to
     # If it doesn't belong in any group, write 'root'
-    category = 'Games'
+    category = 'Scrapper'
     # Put the name for the option to appear in the main menu
-    name = 'Game 1'
+    name = 'Game 2'
     # Write a quick description of this module
     description = 'This is a test feature/module'
+    # Who is the author of this module
+    author = 'Cesar Aracena'
 
     return {'category': category, 'name': name, 'description': description}
 
@@ -27,7 +29,7 @@ def head():
 
 # Main function to call all other methods
 def main():
-    print('This is the main() app of Game 1')
+    print('This is the main() app of Game 2')
 
 # Check to only run the code in this file
 # Do not edit under this line

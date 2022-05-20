@@ -14,20 +14,20 @@
 def head():
     # Write the group this module belongs to
     # If it doesn't belong in any group, write 'root'
-    group = 'Games'
+    category = 'Quiz'
     # Put the name for the option to appear in the main menu
-    name = 'Testing 2'
+    name = 'Quiz 1'
     # Write a quick description of this module
     description = 'This is a test feature/module'
 
-    return {'group': group, 'name': name, 'description': description}
+    return {'category': category, 'name': name, 'description': description}
 
 # Put your work under this line and call it from inside main():
 
 
 # Main function to call all other methods
 def main():
-    pass
+    print('This is the main() app of Quiz 1')
 
 # Check to only run the code in this file
 # Do not edit under this line
