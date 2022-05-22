@@ -45,9 +45,9 @@ def show_projects():
         widget.destroy()
     my_subtitle.config(text='Now choose a project from this category')
 
-def button_launch_module(mod_name):
+def button_launch_module(mod_folder, mod_name):
     try:
-        exec(open('modules/' + mod_name).read())
+        exec(open('modules/' + mod_folder + '/' + mod_name).read())
     except:
         print('There has been an error')
 
@@ -61,7 +61,7 @@ def button_select_cat(cat_id):
         final_pos = 0
         for n in modules:
             name = 'button_' + str(i)
-            name = customtkinter.CTkButton(frame_projects_menu, text=n[2], command=lambda j = n[6]:button_launch_module(j))
+            name = customtkinter.CTkButton(frame_projects_menu, text=n[2], command=lambda j = n[6], m = n[7]:button_launch_module(j, m))
             final_pos = (i / 7) + 0.1
             name.place(relx=0.5, rely=final_pos, anchor=tkinter.N)
             i += 1
@@ -90,7 +90,7 @@ i = 0
 final_pos = 0
 for n in categories:
     name = 'button_' + str(i)
-    name = customtkinter.CTkButton(frame_root_menu, text=n[1], command=lambda j = i:button_select_cat(j))
+    name = customtkinter.CTkButton(frame_root_menu, text=n[1], command=lambda j = i + 1:button_select_cat(j))
     final_pos = (i / 7) + 0.1
     name.place(relx=0.5, rely=final_pos, anchor=tkinter.N)
     i += 1
@@ -98,4 +98,5 @@ for n in categories:
 button_exit = customtkinter.CTkButton(frame_root_menu, text='Exit', command=button_exit_func)
 button_exit.place(relx=0.5, rely=final_pos + 0.2, anchor=tkinter.N)
 
-root_tk.mainloop()
+if __name__ == '__main__':
+    root_tk.mainloop()
